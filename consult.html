@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paradigm Pet Professionals</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styled pages/consult.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-x..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+<body>
+  <header>
+   <!-- Hidden checkbox toggles the menu -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Hamburger icon: The label uses pseudo-elements for top/bottom bars and a span for the middle bar -->
+  <label for="menu-toggle" class="hamburger-menu">
+    <span class="middle"></span>
+  </label>
+
+    <!--Logo Design for top of header-->
+    <div class="logo"><img src="images/PPP-logo.png" alt="Paradigm Pet Professionals Company Logo"></div>
+   
+    <!-- Mobile Navigation Menu -->
+   <nav class="mobile-nav">
+    <ul class="mobile-menu">
+      <li><a href="index.html" >HOME</a></li>
+
+      <li class="dropdown">
+        <!-- Mobile dropdown toggle -->
+        <input type="checkbox" id="mobile-petcare" class="dropdown-toggle-input" />
+        <label for="mobile-petcare" class="dropdown-toggle">
+          PET CARE <span class="arrow">&#9660;</span>
+        </label>
+        <ul class="dropdown-menu">
+          <li><a href="cats.html">CATS</a></li>
+          <li><a href="dogs.html">DOGS</a></li>
+          <li><a href="birds.html">BIRDS</a></li>
+          <li><a href="fish.html">FISH</a></li>
+          <li><a href="smallpets.html">SMALL PETS</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="mobile-resources" class="dropdown-toggle-input" />
+        <label for="mobile-resources" class="dropdown-toggle">
+          RESOURCES <span class="arrow">&#9660;</span>
+        </label>
+        <ul class="dropdown-menu">
+          <li><a href="adopt.html">PET ADOPTION</a></li>
+          <li><a href="index.html#resource-table">Outside Resources</a></li>
+          <li><a href="index.html#reviews">Testimonials</a></li>
+        </ul>
+      </li>
+
+      <li class="active"><a href="consult.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <!-- Desktop Navigation Menu -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li id="home-btn"><a href="index.html" >HOME</a></li>
+
+      <li class="dropdown">
+        <!-- Desktop dropdown toggle -->
+        <input type="checkbox" id="desktop-petcare" class="dropdown-toggle-input" />
+        <label for="desktop-petcare" class="dropdown-toggle">
+          PET CARE <span class="arrow">&#9660;</span>
+        </label>
+        <ul class="dropdown-menu">
+          <li><a href="cats.html">CATS</a></li>
+          <li><a href="dogs.html">DOGS</a></li>
+          <li><a href="birds.html">BIRDS</a></li>
+          <li><a href="fish.html">FISH</a></li>
+          <li><a href="smallpets.html">SMALL PETS</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="desktop-resources" class="dropdown-toggle-input" />
+        <label for="desktop-resources" class="dropdown-toggle">
+          RESOURCES <span class="arrow">&#9660;</span>
+        </label>
+        <ul class="dropdown-menu">
+          <li><a href="adopt.html">PET ADOPTION</a></li>
+          <li><a href="index.html#resource-table">Outside Resources</a></li>
+          <li><a href="index.html#reviews">Testimonials</a></li>
+        </ul>
+      </li>
+
+
+      <li clss="active" id="contact-btn"><a href="consult.html">Consult With a Pexpert!</a></li>
+    </ul>
+  </nav>
+
+  </header>
+
+  
+    <section id="consult-hero">
+      <div class="hero-container">
+        <a href="#consultation-form"><img src="images/consulting-hero.png" alt="Get personalized, evidence‑based advice." class="hero-image" />
+        <img src="images/consulting-mobile.png" alt="Get personalized, evidence‑based advice." class="hero-image-mobile" /></a>
+      </div>
+    </section>
+
+ <!-- Main content: Consultation form -->
+ <main>
+    <section id="consultation-form-section">
+      <h2>Request a Consultation</h2>
+      <p class="form-description">
+        Please fill out the form below with your information so our Pexperts can provide you with personalized pet care advice.
+        We offer basic pet care advice for common pets as well as one-on-one consultations for additional pet health concerns. All fields are required.
+      </p>
+    
+      <!-- Progress Bar -->
+    <ul id="progressbar">
+      <li class="active">Your Information</li>
+      <li>Your Pet's Information</li>
+    </ul>
+    
+    <!-- General Feedback Message -->
+    <div id="feedback" class="feedback"></div>
+    
+    <!-- Multi-Step Form -->
+    <form id="consultation-form" action="#" method="post">
+      
+      <!-- Step 1: User Information -->
+      <fieldset class="form-step active">
+        <legend>Your Information</legend>
+        
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+        <span class="error-message" id="error-first-name"></span>
+        
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last_name" placeholder="Enter your last name" required>
+        <span class="error-message" id="error-last-name"></span>
+        
+        <label for="user-phone">Phone Number:</label>
+        <input type="tel" id="user-phone" name="user_phone" placeholder="Enter your phone number" required>
+        <span class="error-message" id="error-user-phone"></span>
+        
+        <label for="user-email">Email Address:</label>
+        <input type="email" id="user-email" name="user_email" placeholder="Enter your email address" required>
+        <span class="error-message" id="error-user-email"></span>
+        
+        <label for="user-timezone">Time Zone:</label>
+        <select id="user-timezone" name="user_timezone" required>
+          <option value="">Select your time zone</option>
+          <option value="PST">Pacific Standard Time (PST) - UTC-8</option>
+          <option value="MST">Mountain Standard Time (MST) - UTC-7</option>
+          <option value="CST">Central Standard Time (CST) - UTC-6</option>
+          <option value="EST">Eastern Standard Time (EST) - UTC-5</option>
+          <!-- Additional options can be added here -->
+        </select>
+        <span class="error-message" id="error-user-timezone"></span>
+        
+        <button type="button" class="next">Next</button>
+      </fieldset>
+      
+      <!-- Step 2: Pet Information -->
+      <fieldset class="form-step">
+        <legend>Your Pet's Information</legend>
+        
+        <label for="pet-name">Pet's Name:</label>
+        <input type="text" id="pet-name" name="pet_name" placeholder="Enter your pet's name" required>
+        <span class="error-message" id="error-pet-name"></span>
+        
+        <label for="pet-type">Pet Type:</label>
+        <input type="text" id="pet-type" name="pet_type" placeholder="e.g., Dog, Cat, Bird" required>
+        <span class="error-message" id="error-pet-type"></span>
+        
+        <label for="pet-age">Pet's Age:</label>
+        <input type="number" id="pet-age" name="pet_age" placeholder="Enter your pet's age (years)" required min="0">
+        <span class="error-message" id="error-pet-age"></span>
+        
+        <button type="button" class="previous">Previous</button>
+        <button type="submit">Submit Consultation Request</button>
+      </fieldset>
+      
+    </form>
+    </section>
+    <!-- Hidden Thank You Section (initially hidden) -->
+  <section id="thanks">
+    <div class="thanks-container">
+      <span class="close-btn">&times;</span>
+      <img src="images/Pexpert Advice is on its way!.gif" alt="Pexpert Advice is on its way!" class="thanks-image" />
+    </div>
+  </section>
+
+   <!-- Contact Info Section -->
+   <section id="contact-info">
+    <h2>Our Contact Information</h2>
+    <p>
+      Paradigm Pet Professionals<br>
+      1234 Pet Street,<br>
+      Animal City, PA 12345<br>
+      Phone: (123) 456-7890<br>
+      Email: info@paradigmpetpros.com
+    </p>
+    <p>
+      We are here to help you with your pet care needs. Whether you need advice,
+      consultation, or guidance through the adoption process, our team of experts is ready to assist you.
+    </p>
+  </section>
+
+  <!-- Map Section -->
+  <section id="map">
+    <h1 class="banner">Our Location</h1>
+    <div class="map-container">
+      <!-- Replace with your actual map embed if available -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.6789308945613!2d-75.16522108460651!3d39.95258317942366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c7e8a7bdf7d3%3A0xf7f8d6bb0d8e8a0e!2sPhiladelphia%2C%20PA!5e0!3m2!1sen!2sus!4v1618819483475!5m2!1sen!2sus"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <!-- Sitemap Section -->
+      <div class="footer-sitemap">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <ul><li><strong>Pet Care</strong></li>
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="snakes.html">Snakes</a></li>
+            <li><a href="fish.html">Fish</a></li>
+            <li><a href="smallpets.html">Small Pets</a></li>
+          </ul>
+          <li class="footer-contact"><a href="consult.html">Consult with a 'Pexpert'!</a></li>
+          
+        </ul>
+      </div>
+      
+      <!-- Social Media Section -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info Section -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <address>
+          1234 Pet Street,<br>
+          Animal City, PA 12345<br>
+          Phone: (123) 456-7890
+        </address>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Paradigm Pet Professionals. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const nextBtns = document.querySelectorAll('.next');
+  const prevBtns = document.querySelectorAll('.previous');
+  const formSteps = document.querySelectorAll('.form-step');
+  const progressSteps = document.querySelectorAll('#progressbar li');
+  const feedbackDiv = document.getElementById('feedback');
+  const form = document.getElementById('consultation-form');
+  const formSection = document.getElementById('consultation-form-section');
+  const thanksSection = document.getElementById('thanks');
+  const closeBtn = document.querySelector('.close-btn');
+  
+
+   // Override the form submit event
+   form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent actual submission for demonstration
+    
+    // Hide the form section
+    formSection.style.display = 'none';
+    
+    // Display the thank you section overlay
+    thanksSection.style.display = 'block';
+  });
+  
+  // Allow user to close the thank you overlay by clicking the close button
+  closeBtn.addEventListener('click', () => {
+    thanksSection.style.display = 'none';
+    // Optionally, you can reset the form here or redirect the user
+    form.reset();
+    formSection.style.display = 'block';
+  });
+
+  let currentStep = 0;
+
+  // Next button click
+  nextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (validateStep(currentStep)) {
+        displayFeedback("Great job! You got it right.", true);
+        setTimeout(() => {
+          clearFeedback();
+          moveToStep(currentStep + 1);
+        }, 1000);
+      } else {
+        displayFeedback("Please correct the highlighted fields.", false);
+      }
+    });
+  });
+
+  // Previous button click
+  prevBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      moveToStep(currentStep - 1);
+      clearFeedback();
+    });
+  });
+
+  // Move to a specific step
+  function moveToStep(step) {
+    if (step >= 0 && step < formSteps.length) {
+      formSteps[currentStep].classList.remove('active');
+      currentStep = step;
+      formSteps[currentStep].classList.add('active');
+      updateProgressbar();
+    }
+  }
+
+  // Update progress bar display
+  function updateProgressbar() {
+    progressSteps.forEach((stepEl, index) => {
+      if (index <= currentStep) {
+        stepEl.classList.add('active');
+      } else {
+        stepEl.classList.remove('active');
+      }
+    });
+  }
+
+  // Custom validation for the current step
+  function validateStep(stepIndex) {
+    let valid = true;
+    const fields = formSteps[stepIndex].querySelectorAll('input, select');
+    
+    fields.forEach(field => {
+      // Clear previous error message and red border
+      const errorElem = document.getElementById("error-" + field.id);
+      if (errorElem) errorElem.textContent = "";
+      field.classList.remove('invalid');
+
+      // Specific validation based on field id
+      switch (field.id) {
+        case "first-name":
+          if (field.value.trim() === "") {
+            valid = false;
+            field.classList.add('invalid');
+            if (errorElem) errorElem.textContent = "First name is required.";
+          }
+          break;
+        case "last-name":
+          if (field.value.trim() === "") {
+            valid = false;
+            field.classList.add('invalid');
+            if (errorElem) errorElem.textContent = "Last name is required.";
+          }
+          break;
+        case "user-phone":
+          // Remove all non-digit characters and check for exactly 10 digits
+          let digits = field.value.replace(/\D/g, "");
+          if (digits.length !== 10) {
+            valid = false;
+            field.classList.add('invalid');
+            if (errorElem) errorElem.textContent = "Phone number must be exactly 10 digits.";
+          }
+          break;
+        case "user-email":
+          // Basic email regex for validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(field.value.trim())) {
+            valid = false;
+            field.classList.add('invalid');
+            if (errorElem) errorElem.textContent = "Enter a valid email address.";
+          }
+          break;
+        case "user-timezone":
+          if (field.value === "") {
+            valid = false;
+            field.classList.add('invalid');
+            if (errorElem) errorElem.textContent = "Please select your time zone.";
+          }
+          break;
+        case "pet-name":
+          if (field.value.trim() === "") {
+            valid = false;
+            field.classList.add('invalid');
+            if (errorElem) errorElem.textContent = "Pet's name is required.";
+          }
+          break;
+        case "pet-type":
+          if (field.value.trim() === "") {
+            valid = false;
+            field.classList.add('invalid');
+            if (errorElem) errorElem.textContent = "Pet type is required.";
+          }
+          break;
+        case "pet-age":
+          if (field.value === "" || isNaN(field.value) || parseInt(field.value) < 0) {
+            valid = false;
+            field.classList.add('invalid');
+            if (errorElem) errorElem.textContent = "Enter a valid age for your pet.";
+          }
+          break;
+        default:
+          break;
+      }
+    });
+    
+    return valid;
+  }
+
+  // Display general feedback message above the form
+  function displayFeedback(message, isSuccess) {
+    feedbackDiv.textContent = message;
+    feedbackDiv.className = "feedback " + (isSuccess ? "success" : "error");
+  }
+
+  // Clear the general feedback message
+  function clearFeedback() {
+    feedbackDiv.textContent = "";
+    feedbackDiv.className = "feedback";
+  }
+});
+
+  
+  </script>
+
+  
+</body>
+</html>

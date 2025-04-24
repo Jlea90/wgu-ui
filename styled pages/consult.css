@@ -1,0 +1,261 @@
+/* Main Consultation Form Section */
+#consultation-form-section {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#consultation-form-section h2 {
+  font-size: 2rem;
+  color: #003B6D;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #003B6D;
+}
+
+/* Progress Bar Styles */
+#progressbar {
+  counter-reset: step;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+#progressbar li {
+  text-align: center;
+  position: relative;
+  flex: 1;
+  font-size: 1rem;
+  color: #BDBDBD;
+}
+
+#progressbar li.active {
+  color: #003B6D;
+  font-weight: bold;
+}
+
+#progressbar li::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #BDBDBD;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#progressbar li.active::before {
+  border-color: #003B6D;
+}
+
+/* Feedback Styles */
+.feedback {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feedback.success {
+  color: green;
+}
+
+.feedback.error {
+  color: red;
+}
+
+/* Error message styles for individual fields */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Multi-Step Form Styles */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+/* Consultation Form Styles */
+form#consultation-form {
+  background-color: #fafdff;
+  border: 1px solid #BDBDBD;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form#consultation-form fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+form#consultation-form legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #003B6D;
+  margin-bottom: 1rem;
+}
+
+form#consultation-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #003B6D;
+}
+
+form#consultation-form input,
+form#consultation-form select,
+form#consultation-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form#consultation-form input:focus,
+form#consultation-form select:focus,
+form#consultation-form textarea:focus {
+  outline: none;
+  border-color: #6699CC;
+  box-shadow: 0 0 5px rgba(102, 153, 204, 0.5);
+}
+
+/* Highlight invalid inputs */
+.invalid {
+  border-color: red;
+}
+
+/* Button Styles */
+form#consultation-form button {
+  background-color: #6699CC;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+form#consultation-form button:hover {
+  background-color: #003B6D;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #consultation-form-section {
+    padding: 1rem;
+  }
+  form#consultation-form {
+    padding: 1rem;
+  }
+}
+/* Thank You Section (hidden by default) */
+#thanks {
+  display: none;                     /* Hidden initially */
+  position: fixed;                   /* Overlay everything */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 999;                      /* On top of other content */
+}
+
+/* Container for the thank you content */
+.thanks-container {
+  position: relative;
+  margin: 10% auto;                  /* Center vertically (roughly) and horizontally */
+  padding: 20px;
+  background-color: #fff;            /* White background for content */
+  width: 80%;
+  max-width: 1000px;
+  border: 2px solid #003B6D;         /* Example border color */
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Thank you image adjustments */
+.thanks-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Style for close (x) button */
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  font-size: 2.8rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #003B6D;
+}
+
+/* Contact Info Section */
+#contact-info {
+  background-color: #003B6D;
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+#contact-info h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+#contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Map Section */
+#map {
+  margin-bottom: 2rem;
+  background-color: #fafdff;
+  padding: 1rem; /* Padding for the map container */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  
+}
+
+#map .banner {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  max-width: 100%;
+  border: 2px solid #BDBDBD;
+  border-radius: 8px;
+  overflow: hidden;
+}

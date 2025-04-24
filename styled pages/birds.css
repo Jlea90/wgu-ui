@@ -1,0 +1,107 @@
+/* Article Section */
+#bird-article {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+.title {
+    color: #003B6D; /* Midnight Blue */
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  /* Each dog section: image on left, text on right */
+  .bird-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #BDBDBD; /* Silver divider */
+  }
+  
+  /* Image Container */
+  .bird-image {
+    flex: 0 0 40%;  /* Fixed width for image; adjust as needed */
+  }
+  
+  .bird-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  /* Text Container */
+  .bird-text {
+    flex: 1;
+  }
+  
+  .bird-text h2 {
+    color: #003B6D; /* Midnight Blue */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bird-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* List styling within dog sections, if needed */
+  .bird-text ul {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+    margin-bottom: 1rem;
+  }
+  
+  /* Hero Section */
+  #bird-hero .hero-container {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  #bird-hero .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+
+  }
+  #bird-hero .desktop-hero {
+    display: block;
+    position: relative;
+    width: 100%;
+    height:auto;
+  }
+
+  /* Responsive: Stack sections vertically on small screens */
+  @media (max-width: 768px) {
+    #bird-hero .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+   article .title {
+        font-size: 1.6rem;
+        }
+    article .bird-text {
+        font-size: 0.8rem;
+    }
+   
+    .bird-section {
+      flex-direction: column;
+    }
+    .bird-image {
+      width: 80%;
+    }
+    .bird-hero img{
+        width: 100%;
+    }
+  }
+  

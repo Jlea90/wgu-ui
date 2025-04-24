@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paradigm Pet Professionals</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styled pages/dogs.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-x..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header>
+   <!-- Hidden checkbox toggles the menu -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Hamburger icon: The label uses pseudo-elements for top/bottom bars and a span for the middle bar -->
+  <label for="menu-toggle" class="hamburger-menu">
+    <span class="middle"></span>
+  </label>
+
+    <!--Logo Design for top of header-->
+    <div class="logo"><img src="images/PPP-logo.png" alt="Paradigm Pet Professionals Company Logo"></div>
+   
+     <!-- Mobile Navigation Menu -->
+   <nav class="mobile-nav">
+    <ul class="mobile-menu">
+      <li><a href="index.html" >HOME</a></li>
+
+      <li class="dropdown">
+        <!-- Mobile dropdown toggle -->
+        <input type="checkbox" id="mobile-petcare" class="dropdown-toggle-input" />
+        <label for="mobile-petcare" class="dropdown-toggle">
+          PET CARE <span class="arrow">&#9660;</span>
+        </label>
+        <ul class="dropdown-menu">
+          <li><a href="cats.html">CATS</a></li>
+          <li><a href="dogs.html">DOGS</a></li>
+          <li><a href="birds.html">BIRDS</a></li>
+          <li><a href="fish.html">FISH</a></li>
+          <li><a href="smallpets.html">SMALL PETS</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="mobile-resources" class="dropdown-toggle-input" />
+        <label for="mobile-resources" class="dropdown-toggle">
+          RESOURCES <span class="arrow">&#9660;</span>
+        </label>
+        <ul class="dropdown-menu">
+          <li><a href="adopt.html">PET ADOPTION</a></li>
+          <li><a href="index.html#resource-table">Outside Resources</a></li>
+          <li><a href="index.html#reviews">Testimonials</a></li>
+        </ul>
+      </li>
+
+      <li class="active"><a href="consult.html">CONTACT US</a></li>
+    </ul>
+  </nav>
+
+  <!-- Desktop Navigation Menu -->
+  <nav class="navbar">
+    <ul class="nav-menu">
+      <li id="home-btn"><a href="index.html" >HOME</a></li>
+
+      <li class="dropdown">
+        <!-- Desktop dropdown toggle -->
+        <input type="checkbox" id="desktop-petcare" class="dropdown-toggle-input" />
+        <label for="desktop-petcare" class="dropdown-toggle">
+          PET CARE <span class="arrow">&#9660;</span>
+        </label>
+        <ul class="dropdown-menu">
+          <li><a href="cats.html">CATS</a></li>
+          <li class="active"><a href="dogs.html">DOGS</a></li>
+          <li><a href="birds.html">BIRDS</a></li>
+          <li><a href="fish.html">FISH</a></li>
+          <li><a href="smallpets.html">SMALL PETS</a></li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <input type="checkbox" id="desktop-resources" class="dropdown-toggle-input" />
+        <label for="desktop-resources" class="dropdown-toggle">
+          RESOURCES <span class="arrow">&#9660;</span>
+        </label>
+        <ul class="dropdown-menu">
+          <li><a href="adopt.html">PET ADOPTION</a></li>
+          <li><a href="index.html#resource-table">Outside Resources</a></li>
+          <li><a href="index.html#reviews">Testimonials</a></li>
+        </ul>
+      </li>
+
+
+      <li clss="active" id="contact-btn"><a href="consult.html">Consult With a Pexpert!</a></li>
+    </ul>
+  </nav>
+
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+  <section id="dog-hero">
+    <div class="hero-container">
+      <img class="mobile-hero" src="images/dog-hero.gif" alt="Paradigm Pet Professionals, advice for caring for your pet dog." class="hero-image" />
+      <img class="desktop-hero" src="images/dog-hero.png" alt="Paradigm Pet Professionals, advice for caring for your pet dog." class="hero-image" />
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article id="dog-article">
+  <h1 class="title">Dog Care</h1>
+    <!-- Introduction Section -->
+    <div class="dog-section">
+      <div class="dog-image">
+        <img src="images/pups-sleeping.png" alt="Puppies sleeping in a row">
+      </div>
+      <div class="dog-text">
+        <p>
+          The domestic dog is an extremely social animal and offers a diverse variety of choices as there are well over 300 breeds recognized by the World Canine Organization. Adopting a dog offers mutual benefits between dog and owner. Many studies cite the social benefits of having a companion as well as the reduced feelings of loneliness from adopting a dog. Studies even show medical indicators such as reduced blood pressure and improved lipid profiles. If you have a dog, it is important to make sure that you care for your dog; be mindful of what you feed your dog and provide enough opportunities for exercise. In this page, you will find more information about how to care for your pets throughout the various stages of their lives.
+        </p>
+      </div>
+    </div>
+
+    <!-- Diet & Exercise Section -->
+    <div class="dog-section">
+      <div class="dog-image">
+        <img src="images/dog-running.png" alt="Dog running outside">
+      </div>
+      <div class="dog-text">
+        <h2>Diet &amp; Exercise</h2>
+        <p>
+          Throughout dogs’ lifespans, they should generally be fed fewer meals as they mature. Puppies should be nursed the first two months, then introduced to three meals per day when they are about three to six months old. Their food intake should be reduced to two meals per day when they are six months to one year old and finally reduced to one meal after they reach one year old. And a dog’s typical body mass is composed of somewhere between 60 and 70 percent water. The ASPCA says just a 10 percent decrease in body water can cause illness, and a 15 percent loss can cause death, so make sure you keep your pooch hydrated!
+        </p>
+      </div>
+    </div>
+
+    <!-- Grooming & Handling Section -->
+    <div class="dog-section">
+      <div class="dog-image">
+        <img src="images/dog-groomed.png" alt="Dog being groomed">
+      </div>
+      <div class="dog-text">
+        <h2>Grooming &amp; Handling</h2>
+        <p>
+          Keeping your furry family member clean is important to its health. So be sure to brush frequently to reduce the amount of shedding and prevent matted and tangled fur that can prove to be extremely difficult to remove. Check for insects such as ticks and fleas, especially after visiting heavily wooded areas. Bathing is not only important to your dog’s health but can be an exercise depending on how strong willed the dog is. Rinse all of the soap out, as any residual soap can result in a rash. Be sure the soap is formulated for your puppy or dog, since harsh soaps can cause allergic reactions. And as always, be careful how you handle your loved one. No matter the size of your dog, you need to be cautious as you carry your canine. If you have a small dog, then cradle the pup with one hand under the chest and the forearm supporting the back half. If it is a large dog, reach under the belly with both your arms perpendicular to the dog, and use each arm to support the chest and rear as you lift.
+        </p>
+      </div>
+    </div>
+
+    <!-- Vaccinations & Medications Section -->
+    <div class="dog-section">
+      <div class="dog-image">
+        <img src="images/dog-vet.png" alt="Dog at the vet">
+      </div>
+      <div class="dog-text">
+        <h2>Vaccinations &amp; Medications</h2>
+        <p>
+          You should always consult with your veterinarian, but there is a core set of vaccines that are typically recommended. Vaccines that reduce the exposure risk to things such as hepatitis, rabies, and parvovirus. Others may be determined by your vet depending on the environment in which the dog resides. Some of these include Bordetella bronchiseptica, Borrelia burgdorferi, and Leptospira bacteria.
+        </p>
+      </div>
+    </div>
+
+  </article>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <!-- Sitemap Section -->
+      <div class="footer-sitemap">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <ul><li><strong>Pet Care</strong></li>
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="snakes.html">Snakes</a></li>
+            <li><a href="fish.html">Fish</a></li>
+            <li><a href="smallpets.html">Small Pets</a></li>
+          </ul>
+          <li class="footer-contact"><a href="consult.html">Consult with a 'Pexpert'!</a></li>
+          
+        </ul>
+      </div>
+      
+      <!-- Social Media Section -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info Section -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <address>
+          1234 Pet Street,<br>
+          Animal City, PA 12345<br>
+          Phone: (123) 456-7890
+        </address>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Paradigm Pet Professionals. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+  
+</body>
+</html>

@@ -1,0 +1,828 @@
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: inherit; /* Use the font family of the body for consistency */
+  }
+
+  /* Global Styles */
+html {
+    font-size: 18px; /* Base font size for rem calculations */
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+  }
+  
+  /* Body and Header Styles */
+body {
+    font-family: "Atkinson Hyperlegible", sans-serif; /* Use Atkinson Hyperlegible font for better readability */
+    line-height: 1.6; /* Improved readability */
+    letter-spacing: 2px; /* Slightly increase letter spacing for better readability */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #003B6D;
+  }
+  
+/* Variables and Global Styles remain unchanged */
+:root {
+    --bar-width: 50px;
+    --bar-height: 5px;
+    --hamburger-gap: 6px; /* Gap between bars */
+    --foreground: #0c344e; /* Hamburger bar color */
+    --hamburger-margin-left: 20px; /* Left margin for hamburger */
+    --hamburger-margin: 40px; /* Top margin for hamburger */
+    --animation-timing: 200ms ease-in-out; /* Animation timing */
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2); /* Total height */
+  }
+  
+
+header {
+    background-color: #fafdff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #BDBDBD;
+  }
+
+  header nav .active {
+    background-color: #6699CC;
+    border-radius: 5px;
+  }
+  header nav .active a {
+    color: #fff;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+.logo img {
+    width: 27%;
+    height: auto;
+    margin: 0 auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+/* Desktop Navigation */
+.navbar {
+    margin-top: 1rem;
+  }
+.navbar .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+.navbar .nav-menu li {
+    position: relative;
+  }
+  
+  /* Hide any default link inside dropdown if present */
+.navbar .dropdown > a {
+    display: none;
+  }
+  
+  /* Base link styles */
+.navbar .nav-menu a {
+    color: #003B6D;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+.navbar .nav-menu a:hover,
+.navbar .nav-menu a.active {
+    background-color: #6699CC;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Dropdown Toggle for Desktop */
+.navbar .dropdown {
+    position: relative;
+  }
+.navbar .dropdown-toggle-input {
+    display: none;
+  }
+.navbar .dropdown-toggle {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: #003B6D; /* Text color for the dropdown toggle */
+    background: none;
+    border: none;
+    font: inherit;
+    position: relative;
+  }
+.navbar .dropdown-toggle .arrow {
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+.navbar .dropdown-toggle-input:checked + .dropdown-toggle .arrow {
+    transform: rotate(180deg);
+  }
+  
+  /* Dropdown Menu for Desktop */
+.navbar .dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fafdff;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 0;
+    box-shadow: 0px 5px 15px rgba(70, 74, 78, 0.151); /* Box-shadow for dropdown */
+    width: 300px; /* Adjust width as needed */
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    z-index: 10;
+  }
+
+.navbar .dropdown-menu li {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 0.5rem 1rem; /* Padding for each menu item */
+    color: #003B6D; /* Text color for the dropdown items */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    flex-direction: row; /* Ensure items are in a row */
+  }
+.navbar .dropdown-toggle-input:checked + .dropdown-toggle + .dropdown-menu {
+    max-height: 500px; /* Adjust as needed */
+    opacity: 1;
+  }
+.navbar .nav-menu #home-btn {
+    display: flex;
+    justify-content: center; /* Center the button */
+    align-items: center; /* Center vertically */
+  }
+.navbar .nav-menu #contact-btn {
+    justify-content: center;
+    display: flex; /* Center the button */
+    align-items: center; /* Center vertically */
+    border: 2px solid #003B6D; /* Border for the button */
+    border-radius: 5px;
+  }
+
+.navbar .nav-menu #contact-btn a {
+    color: #003B6D; /* Text color for the button */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0.5rem 1rem; /* Padding inside the button */
+    font-size: 1rem; /* Font size for the button text */
+    transition: all 0.3s ease;
+  }
+.navbar .nav-menu #contact-btn:hover {
+    background-color: #003a6d7a; /* Background color on hover */
+    color: white; /* Text color on hover */
+    }
+.navbar .nav-menu #contact-btn:hover a {
+    color: white; /* Text color for the link inside the button on hover */
+    border: solid 2px #003B6D; /* Maintain border on hover */
+    }
+  
+  /* Hide Mobile elements by default on desktop */
+  .hamburger-menu,
+  .mobile-nav {
+    display: none;
+  }
+
+#menu-toggle {
+    display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Hide Desktop Menu */
+    .navbar {
+      display: none;
+    }
+  
+    /* Show Hamburger Icon */
+    .hamburger-menu {
+        display: flex; /* Changed from none to flex so it shows */
+        cursor: pointer;
+        width: var(--bar-width);
+        height: var(--hamburger-height);
+        position: absolute;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin-left);
+        z-index: 10;
+        flex-direction: column;
+        justify-content: space-between;
+  }
+    
+    /* Show the hamburger icon when the menu is toggled */
+    .hamburger-menu span,
+    .hamburger-menu::before,
+    .hamburger-menu::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 999px;
+        position: absolute;
+        left: 0;
+        transition: transform var(--animation-timing), opacity var(--animation-timing);
+      }
+
+      .hamburger-menu span {
+        top: 50%;
+        transform: translateY(-50%); /* Center the middle bar */
+      }
+      .hamburger-menu::before {
+        top: 0; /* Position the top bar */
+      }
+      .hamburger-menu::after {
+        bottom: 0; /* Position the bottom bar */
+      }
+
+    /* Transform hamburger to X when checkbox is checked */
+    #menu-toggle:checked + .hamburger-menu::before {
+        transform: translateY(calc(var(--hamburger-height) / 2 - var(--bar-height) / 2)) rotate(45deg);
+    }
+    #menu-toggle:checked + .hamburger-menu::after {
+        transform: translateY(calc(-1 * (var(--hamburger-height) / 2 - var(--bar-height) / 2))) rotate(-45deg);
+    }
+    #menu-toggle:checked + .hamburger-menu span {
+        opacity: 0;
+    }
+
+    .mobile-nav {
+        display: block;
+        position: absolute;
+        /* Position below the header (using top: 100% ensures it appears below the header) */
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fafdff;
+        transform: translateY(-150%); /* Hidden by default (moved upward) */
+        transition: transform 0.4s ease-in-out;
+        z-index: 5;
+   
+    }
+
+    /* When checkbox is checked, show mobile nav */
+    #menu-toggle:checked ~ .mobile-nav {
+        transform: translateY(0);
+    }
+
+    .mobile-nav .mobile-menu {
+        list-style: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Added box-shadow effect */
+        padding: 2rem 1rem;  /* Extra top padding so menu items clear the hamburger */
+    }
+    .mobile-nav .mobile-menu li {
+      margin-bottom: 1rem;
+    }
+    .mobile-nav .mobile-menu a {
+      color: #003B6D;
+      text-decoration: none;
+      font-size: 1rem;
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: all 0.4s ease; /* Transition for hover effect */
+    }
+    .mobile-nav .mobile-menu a:hover,
+    .mobile-nav .mobile-menu a.active {
+      background-color: #6699CC; /* Background color on hover */
+      color: white; /* Text color on hover */
+      border-radius: 3px; /* Rounded corners for the links */
+    }
+    li .active {
+      background-color: #6699CC; /* Background color on hover */
+      color: white; /* Text color on hover */
+      border-radius: 3px; /* Rounded corners for the links */
+    }
+  
+    /* Dropdown Toggle for Mobile */
+    .mobile-nav .dropdown {
+      position: relative;
+    }
+
+    .mobile-nav .dropdown-toggle-input {
+      display: none;
+    }
+    .mobile-nav .dropdown-toggle {
+      display: flex;
+      align-items: center; /* Center the text and arrow vertically */
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      color: #003B6D;
+      background: none;
+      border: none;
+      font-weight: bold;
+      width: 100%;
+    }
+    /* Add an arrow to indicate dropdown */
+    .mobile-nav .dropdown-toggle .arrow {
+      display: inline-block; /* Show the arrow icon */
+      margin-left: 0.5rem; /* Space between the text and the arrow */
+      transition: transform 0.3s ease;
+    }
+   
+    .mobile-nav .dropdown-toggle-input:checked + .dropdown-toggle .arrow {
+      transform: rotate(180deg);
+    }
+  
+    /* Dropdown Menu for Mobile */
+    .mobile-nav .dropdown-menu {
+        list-style: none;
+        padding-left: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        background: #fafdff;
+        border-radius: 5px;
+    }
+
+    .dropdown-toggle-input:checked + .dropdown-toggle + .dropdown-menu {
+      max-height: 500px;
+      opacity: 1;
+    }
+    
+    /* Fade out logo when mobile menu is open */
+    #menu-toggle:checked ~ .logo {
+        opacity: 0.5; /* Reduce opacity of the logo when the mobile menu is open */
+        transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity change */
+
+    }
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .hero-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+  }
+
+  .hero-container .hero-image {
+    width: 100%;
+    margin: 0;
+    height: auto; 
+  }
+
+  /* Responsive Call-to-Action Button Styling */
+.cta-button {
+  position: absolute;  
+  /* Use percentages so the button adjusts its position relative to the hero container */
+  bottom: 5%;
+  right: 5%;
+  
+  background-color: #6699CC; 
+  color: #fff;
+  /* Use clamp() to have a responsive font size */
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  /* Use relative padding */
+  padding: 1.2rem 1rem;
+  
+  text-decoration: none;
+  border-radius: 20px;
+  
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: 'Lucida Sans', sans-serif;
+  font-weight: 600;
+}
+
+/* Mobile Hero Image is hidden by default */
+.hero-image-mobile {
+  display: none;
+}
+
+
+/* Hover Effects */
+.cta-button:hover {
+  background-color: #003B6D;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Adjustments for medium screens */
+@media (max-width: 1024px) {
+  .cta-button {
+    bottom: 3%;
+    right: 3%;
+    padding: 1rem 0.8rem;
+  }
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+   /* Hide the desktop image, show the mobile image */
+   .hero-image {
+    display: none;
+  }
+  .hero-image-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .hero-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* This ensures content is centered vertically in mobile */
+  }
+  /* Reposition the CTA button below the image and stretch full width */
+  .cta-button {
+    position: static;         /* Remove absolute positioning */
+    width: 100%;              /* Full width button */
+    margin: 0;           /* Spacing above and below */
+    padding: 1rem;            /* Adjust padding for readability */
+    font-size: 1.25rem;       /* Slightly smaller font for mobile */
+    border-radius: 0;         /* Remove rounded corners if desired */
+    text-align: center;
+  }
+}
+
+  #about h1 {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #003B6D;
+    color:#f9f9f9;
+    margin: 0 auto; /* Center the heading */
+    padding: 1rem; /* Add some padding for better appearance */
+    position: relative;
+    justify-content: center; /* Center the heading */
+    display: flex; /* Use flexbox to center the heading */
+    text-align: center; /* Center the text inside the heading */
+    font-size: 2.5rem; /* Font size for the heading */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 0;
+    left: 0;
+  }
+
+main .main-content {
+  max-width: 1400px; /* Limit the width of the main content area */
+  margin: 10% auto; /* Center the main content */
+  
+}
+
+/* Container for About Section */
+.about-content {
+    display: flex;                /* Use flexbox to arrange columns */
+    flex-direction: column;
+    gap: 2rem;                    /* Space between text and image */
+  }
+
+/* Each pair container uses flexbox to align its children side by side */
+.about-pair {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* First pair: default row order (text left, image right) */
+.first-pair {
+  flex-direction: row;
+}
+
+/* Second pair: the HTML order puts image first, then text */
+.second-pair {
+  flex-direction: row;
+}
+
+/* Text Containers */
+.about-text,
+.about-advice {
+  flex: 1;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.about-text p,
+.about-advice p {
+  font-size: 1.4rem;
+  line-height: 1.44;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: #061a27;
+  max-width: 800px;
+}
+
+/* Image Containers */
+.about-image {
+  flex: 1;
+  max-width: 40%;  /* Adjust if necessary */
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px; /* Optional: adds rounded corners */
+}
+
+/* Mobile Styles: Stack each pair vertically */
+@media (max-width: 768px) {
+  .about-pair {
+    flex-direction: column;
+  }
+  .about-image {
+    max-width: 100%;
+  }
+  .about-text,
+  .about-advice {
+    margin: 8px 0; /* Add some margin to separate text from the image on mobile */
+    text-align: center; /* Center the text on mobile for better readability */
+    padding-top: 0; /* Remove padding to avoid extra space on mobile */
+    max-width: 100%; /* Ensure it uses the full width on mobile */
+  }
+
+  main p {
+    font-size: 13px; /* Adjust font size for paragraphs on mobile for better readability */
+  }
+}
+  
+  #resource-table h2 {
+    width: 100%;
+    height: 100px;
+    font-style: italic;
+    font-family: 'Atkinson Hyperlegible', sans-serif; /* Use Atkinson Hyperlegible font for better readability */
+    background-color: #003B6D;
+    color: #f9f9f9;
+    margin: 0;
+    padding: 1rem; /* Add some padding for better appearance */
+    text-align: center; /* Center the text inside the heading */
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .resource-aside {
+    position: relative;
+    left: 0;
+    margin: 0;
+    top: 0;
+    background-color: #003B6D;
+  
+    opacity: 0.8; /* Semi-transparent background */
+    width: 90%; /* Set width for the aside section */
+    padding: 1rem; /* Add some padding for better appearance */
+  }
+
+  .resource-aside p {
+    padding: 1rem; /* Add some padding for better appearance */
+    font-size: 1.2rem; /* Font size for paragraphs */
+    line-height: 140%;
+    color:#ffffff;
+    font-weight: 600;
+    font-family: 'Atkinson Hyperlegible', sans-serif; /* Ensure consistency with the body font */
+    max-width: 530px;
+    max-width:max-content;
+    text-align: center; /* Center the text inside the paragraph */
+    margin: 0 auto; /* Center the paragraph within the aside */
+  }
+  .resource-aside p a {
+    color: #ffffff; /* Link color */
+    text-decoration: underline; /* Underline links for better visibility */
+    transition: color 0.3s ease; /* Transition for hover effect */
+  }
+    .resource-aside p a:hover {
+        color: #93cef5dc; /* Change color on hover */
+    }
+
+    /* Grid container for resource links */
+#resources-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px)); /* Fixed width columns */
+    gap: 1rem; /* Space between grid items */
+    padding: 1rem 0 1rem 1.5rem; /* Padding around the grid container */
+    margin: 0 auto; /* Center the grid container */
+  }
+  
+  /* Individual grid item */
+  .resource-item {
+    position: relative;      /* For overlay positioning */
+    overflow: hidden;        /* Ensures overlay stays within bounds */
+  }
+  
+  /* Resource image styling */
+  .resource-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  /* Overlay that appears on hover */
+  .resource-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(12, 52, 78, 0.8); /* A dark blue overlay (adjust as needed) */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+    padding: 0.5rem;
+  }
+  
+  /* On hover, fade the image and show overlay */
+  .resource-item:hover img {
+    opacity: 0;
+  }
+  
+  .resource-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  
+  /* Reviews Section */
+#reviews {
+  padding: 2rem;
+  background-color: #f5f5f5;
+  color: #003B6D;
+  text-align: center;
+}
+
+#reviews h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+/* Slideshow container */
+.slideshow {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  /* Set a min-height to prevent layout shift */
+  min-height: 150px;
+}
+
+/* Each slide */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Active slide */
+.slide.active {
+  opacity: 1;
+  position: relative; /* Make the active slide participate in the document flow */
+}
+
+/* Blockquote styling for reviews */
+.slide blockquote {
+  background-color: #fff;
+  border-left: 4px solid #6699CC;
+  padding: 1rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.slide blockquote p {
+  margin-bottom: 1rem;
+  font-family: 'Atkinson Hyperlegible', sans-serif; /* Ensure consistency with the body font */
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.slide blockquote footer {
+  font-weight: bold;
+  text-align: right;
+}
+
+  
+  footer {
+    background-color: #676767;
+    color: white;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+  }
+  /* Container for the three footer sections */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  /* Each footer section gets at least 200px width and grows as needed */
+.footer-sitemap,
+.footer-social,
+.footer-contact {
+  flex: 1 1 200px;
+}
+/* Unstyled list for sitemap and social links */
+.footer-sitemap ul,
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-sitemap ul li,
+.footer-social ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Link styles for sitemap and social icons */
+.footer-sitemap ul li a,
+.footer-social ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-sitemap ul li a:hover,
+.footer-social ul li a:hover {
+  color: #ccc;
+}
+
+/* Contact info styles */
+.footer-contact address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* Bottom footer with copyright */
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1rem;
+  font-size: 0.8rem;
+}
+
+footer .footer-contact a {
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  bottom: 0;
+  left: 130%;
+  transform: translateX(-50%); /* Center the button */
+
+}
+footer .footer-contact a:hover {
+  color: #fafafa;
+  background-color: rgba(19, 136, 238, 0.616);
+  border-color: #f5f7fa;
+  
+}
+.footer-contact a:active {
+  transform: translateY(2px); /* Slightly move down on click */
+}
+
+/* Responsive: Stack footer sections on small screens */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-sitemap,
+  .footer-social,
+  .footer-contact {
+    text-align: center;
+  }
+}

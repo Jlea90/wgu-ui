@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paradigm Pet Professionals</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styled pages/birds.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-x..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header>
+   <!-- Hidden checkbox toggles the menu -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Hamburger icon: The label uses pseudo-elements for top/bottom bars and a span for the middle bar -->
+  <label for="menu-toggle" class="hamburger-menu">
+    <span class="middle"></span>
+  </label>
+
+    <!--Logo Design for top of header-->
+    <div class="logo"><img src="images/PPP-logo.png" alt="Paradigm Pet Professionals Company Logo"></div>
+   
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav">
+      <ul class="mobile-menu">
+        <li><a href="index.html" >HOME</a></li>
+  
+        <li class="dropdown">
+          <!-- Mobile dropdown toggle -->
+          <input type="checkbox" id="mobile-petcare" class="dropdown-toggle-input" />
+          <label for="mobile-petcare" class="dropdown-toggle">
+            PET CARE <span class="arrow">&#9660;</span>
+          </label>
+          <ul class="dropdown-menu">
+            <li><a href="cats.html">CATS</a></li>
+            <li><a href="dogs.html">DOGS</a></li>
+            <li><a href="birds.html">BIRDS</a></li>
+            <li><a href="fish.html">FISH</a></li>
+            <li><a href="smallpets.html">SMALL PETS</a></li>
+          </ul>
+        </li>
+  
+        <li class="dropdown">
+          <input type="checkbox" id="mobile-resources" class="dropdown-toggle-input" />
+          <label for="mobile-resources" class="dropdown-toggle">
+            RESOURCES <span class="arrow">&#9660;</span>
+          </label>
+          <ul class="dropdown-menu">
+            <li><a href="adopt.html">PET ADOPTION</a></li>
+            <li><a href="index.html#resource-table">Outside Resources</a></li>
+            <li><a href="index.html#reviews">Testimonials</a></li>
+          </ul>
+        </li>
+  
+        <li class="active"><a href="consult.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Desktop Navigation Menu -->
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li id="home-btn"><a href="index.html" >HOME</a></li>
+  
+        <li class="dropdown">
+          <!-- Desktop dropdown toggle -->
+          <input type="checkbox" id="desktop-petcare" class="dropdown-toggle-input" />
+          <label for="desktop-petcare" class="dropdown-toggle">
+            PET CARE <span class="arrow">&#9660;</span>
+          </label>
+          <ul class="dropdown-menu">
+            <li><a href="cats.html">CATS</a></li>
+            <li><a href="dogs.html">DOGS</a></li>
+            <li class="active"><a href="birds.html">BIRDS</a></li>
+            <li><a href="fish.html">FISH</a></li>
+            <li><a href="smallpets.html">SMALL PETS</a></li>
+          </ul>
+        </li>
+  
+        <li class="dropdown">
+          <input type="checkbox" id="desktop-resources" class="dropdown-toggle-input" />
+          <label for="desktop-resources" class="dropdown-toggle">
+            RESOURCES <span class="arrow">&#9660;</span>
+          </label>
+          <ul class="dropdown-menu">
+            <li><a href="adopt.html">PET ADOPTION</a></li>
+            <li><a href="index.html#resource-table">Outside Resources</a></li>
+            <li><a href="index.html#reviews">Testimonials</a></li>
+          </ul>
+        </li>
+  
+  
+        <li clss="active" id="contact-btn"><a href="consult.html">Consult With a Pexpert!</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+  <section id="bird-hero">
+    <div class="hero-container">
+      
+      <a href="consult.html"><img src="images/bird-hero.gif" alt="Paradigm Pet Professionals, advice for caring for your pet bird." class="hero-image" /></a>
+    </div>
+  </section>
+
+  <!-- Article Content -->
+  <article id="bird-article">
+  <h1 class="title">Bird Care</h1>
+    <!-- Introduction Section -->
+    <div class="bird-section">
+      <div class="bird-image">
+        <img src="images/diverse-birds.jpg" alt="Different bird species together">
+      </div>
+      <div class="bird-text">
+        <p>Birds are some of the most intriguing creatures on our planet. They come in an incredible range of sizes, from the tiny Cuban bee hummingbird—measuring just two inches long and weighing barely over 1/20 of an ounce—to the towering ostrich, the largest living bird. While many birds are known for their ability to fly, not all species take to the skies; some, like penguins and emus, have adapted to life on land or in water. Each bird breed carries its own unique charm, particularly in how it interacts with its environment and caretakers.</p>
+      </div>
+    </div>
+
+    <!-- Diet & Exercise Section -->
+    <div class="bird-section">
+      <div class="bird-image">
+        <img src="images/bird-eating.jpg" alt="Pet Bird eating food on palm of hand">
+      </div>
+      <div class="bird-text">
+        <h2>Diet &amp; Exercise</h2>
+        <p>Beyond their beauty and intelligence, birds also have complex emotional and social needs. They form bonds, thrive on stimulation, and need consistent interaction and care. Unfortunately, birds can suffer from emotional distress just like humans. Depression in birds can stem from several causes, such as a physical or mental illness, the loss of a companion, or simply a lack of mental and physical stimulation. These emotional challenges can significantly impact a bird’s overall well-being if left unaddressed.</p>
+      </div>
+    </div>
+
+    <!-- Grooming & Handling Section -->
+    <div class="bird-section">
+      <div class="bird-image">
+        <img src="images/bird-cage.jpg" alt="Bird in a cage depressed">
+      </div>
+      <div class="bird-text">
+        <h2>Grooming &amp; Handling</h2>
+        <p>If your bird seems off, it’s important to watch for common signs of depression. These may include reduced appetite, increased irritability, aggression, or even a noticeable change in the tone of its songs—sounding more solemn or less frequent. If you observe any of these symptoms, consult your veterinarian as soon as possible. Early intervention, just like in humans, can make a significant difference in recovery and can even extend your feathered friend’s lifespan. Being proactive in your bird’s care helps ensure it lives a happy, healthy life.</p>
+      </div>
+    </div>
+
+    <!-- Vaccinations & Medications Section -->
+    <div class="bird-section">
+      <div class="bird-image">
+        <img src="images/bird-cuddle.jpg" alt="Young girl cuddling with a bird">
+      </div>
+      <div class="bird-text">
+        <h2>Vaccinations &amp; Medications</h2>
+        <p>Caring for a bird goes beyond providing food and a clean cage—it's about building a meaningful connection. Birds are highly social animals and crave interaction, stimulation, and affection from their caregivers. Talking to your bird regularly, offering gentle handling (if your bird is comfortable), providing toys that encourage mental engagement, and even playing music or nature sounds can help strengthen your bond. Some birds thrive when they can observe household activity from a perch near the window or enjoy daily “out-of-cage” time in a safe space. By tuning into your bird’s personality and making time for shared moments, you can greatly enrich their emotional health and create a deeper, more trusting relationship.</p>
+      </div>
+    </div>
+
+  </article>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <!-- Sitemap Section -->
+      <div class="footer-sitemap">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <ul><li><strong>Pet Care</strong></li>
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="snakes.html">Snakes</a></li>
+            <li><a href="fish.html">Fish</a></li>
+            <li><a href="smallpets.html">Small Pets</a></li>
+          </ul>
+          <li class="footer-contact"><a href="consult.html">Consult with a 'Pexpert'!</a></li>
+          
+        </ul>
+      </div>
+      
+      <!-- Social Media Section -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info Section -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <address>
+          1234 Pet Street,<br>
+          Animal City, PA 12345<br>
+          Phone: (123) 456-7890
+        </address>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Paradigm Pet Professionals. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+  
+</body>
+</html>
