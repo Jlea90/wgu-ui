@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paradigm Pet Professionals</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-x..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <header>
+   <!-- Hidden checkbox toggles the menu -->
+  <input type="checkbox" id="menu-toggle" />
+
+  <!-- Hamburger icon: The label uses pseudo-elements for top/bottom bars and a span for the middle bar -->
+  <label for="menu-toggle" class="hamburger-menu">
+    <span class="middle"></span>
+  </label>
+
+    <!--Logo Design for top of header-->
+    <div class="logo"><img src="images/PPP-logo.png" alt="Paradigm Pet Professionals Company Logo"></div>
+   
+    <!-- Mobile Navigation Menu -->
+    <nav class="mobile-nav">
+      <ul class="mobile-menu">
+        <li class="active"><a href="index.html" >HOME</a></li>
+  
+        <li class="dropdown">
+          <!-- Mobile dropdown toggle -->
+          <input type="checkbox" id="mobile-petcare" class="dropdown-toggle-input" />
+          <label for="mobile-petcare" class="dropdown-toggle">
+            PET CARE <span class="arrow">&#9660;</span>
+          </label>
+          <ul class="dropdown-menu">
+            <li><a href="cats.html">CATS</a></li>
+            <li><a href="dogs.html">DOGS</a></li>
+            <li><a href="birds.html">BIRDS</a></li>
+            <li><a href="fish.html">FISH</a></li>
+            <li><a href="smallpets.html">SMALL PETS</a></li>
+          </ul>
+        </li>
+  
+        <li class="dropdown">
+          <input type="checkbox" id="mobile-resources" class="dropdown-toggle-input" />
+          <label for="mobile-resources" class="dropdown-toggle">
+            RESOURCES <span class="arrow">&#9660;</span>
+          </label>
+          <ul class="dropdown-menu">
+            <li><a href="adopt.html">PET ADOPTION</a></li>
+            <li><a href="index.html#resource-table">Outside Resources</a></li>
+            <li><a href="index.html#reviews">Testimonials</a></li>
+          </ul>
+        </li>
+  
+        <li class="active"><a href="consult.html">CONTACT US</a></li>
+      </ul>
+    </nav>
+  
+    <!-- Desktop Navigation Menu -->
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li class="active" id="home-btn"><a href="index.html" >HOME</a></li>
+  
+        <li class="dropdown">
+          <!-- Desktop dropdown toggle -->
+          <input type="checkbox" id="desktop-petcare" class="dropdown-toggle-input" />
+          <label for="desktop-petcare" class="dropdown-toggle">
+            PET CARE <span class="arrow">&#9660;</span>
+          </label>
+          <ul class="dropdown-menu">
+            <li><a href="cats.html">CATS</a></li>
+            <li><a href="dogs.html">DOGS</a></li>
+            <li><a href="birds.html">BIRDS</a></li>
+            <li><a href="fish.html">FISH</a></li>
+            <li><a href="smallpets.html">SMALL PETS</a></li>
+          </ul>
+        </li>
+  
+        <li class="dropdown">
+          <input type="checkbox" id="desktop-resources" class="dropdown-toggle-input" />
+          <label for="desktop-resources" class="dropdown-toggle">
+            RESOURCES <span class="arrow">&#9660;</span>
+          </label>
+          <ul class="dropdown-menu">
+            <li><a href="adopt.html">PET ADOPTION</a></li>
+            <li><a href="index.html#resource-table">Outside Resources</a></li>
+            <li><a href="index.html#reviews">Testimonials</a></li>
+          </ul>
+        </li>
+  
+  
+        <li clss="active" id="contact-btn"><a href="consult.html">Consult With a Pexpert!</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+    <section id="home-hero">
+      <div class="hero-container">
+        <img src="images/paradigm-hero.png" alt="Paradigm Pet Professionals, evidence based advice for your pets needs." class="hero-image" />
+        <img src="images/paradigm-hero-mobile.png" alt="Paradigm Pet Professionals, evidence based advice for your pets needs." class="hero-image-mobile" />
+        <!-- Call to Action Button -->
+    <a href="consult.html" class="cta-button">Talk to a 'Pexpert' Now!</a>
+      </div>
+    </section>
+     
+    <section id="about">
+        <h1 class="banner">WHAT WE DO</h1>
+
+        <div class="main-content">
+          <div class="about-content">
+            <!-- First Pair: Text Left, Image Right -->
+            <div class="about-pair first-pair">
+              <div class="about-text">
+                <p>
+                  Pets are nature's gift to humanity. It has been scientifically proven that opening our homes and hearts to a pet increases our longevity and improves our overall quality of life as well as the lives of our pets.<br><br>
+                  At Pet Paradigm Professionals, our mission is to offer resources to help you care for your furry, scaly, feathery, and slimy loved ones. Our pet experts—or “Pexperts”—have been working with pet owners and professionals alike for the past twelve years.
+                </p>
+              </div>
+              <div class="about-image">
+                <img src="images/about-image.jpg" alt="Pet owner embracing their dog">
+              </div>
+            </div>
+        
+            <!-- Second Pair: Image Left, Text Right -->
+            <div class="about-pair second-pair">
+              <div class="about-image">
+                <img src="images/consulting.png" alt="An image of two people consulting together">
+              </div>
+              <div class="about-advice">
+                <p>
+                  Looking for basic pet care advice for the most common type of pets? Need additional help determining which type of pet is right for you and your family? We will work with you and provide tailored evidence-based pet care to ensure lifelong health and wellness of your new companion.<br><br>
+                  They offer one-on-one consultations with current and prospective pet owners as well as group presentations designed for veterinary, pet shelter, and pet breeding professionals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+  
+    </section>
+</div>
+    <section id="resource-table">
+        <h2>Looking for your new best friend? <br>The following organizations can help you find and adopt the perfect companion:</h2>
+    
+        <div id="resources-links">
+             <!-- Grid item: General Pet Resources -->
+    <div class="resource-item">
+        <a href="https://bestfriends.org/pet-care-resources/issues/pet-adoption-resources" target="_blank">
+          <!-- Replace with your image source -->
+          <img src="images/2.png" alt="General Pet Resources">
+          <span class="overlay">General Pet Resources</span>
+        </a>
+      </div>
+      <!-- Grid item: ASPCA -->
+      <div class="resource-item">
+        <a href="https://www.aspca.org/" target="_blank">
+          <img src="images/3.png" alt="ASPCA">
+          <span class="overlay">ASPCA</span>
+        </a>
+      </div>
+      <!-- Grid item: Fish Rescue -->
+      <div class="resource-item">
+        <a href="https://www.sterlingshelter.org/humane-society/koi-fish-rescue/" target="_blank">
+          <img src="images/4.png" alt="Fish Rescue">
+          <span class="overlay">Fish Rescue</span>
+        </a>
+      </div>
+      <!-- Grid item: Snake Rescue -->
+      <div class="resource-item">
+        <a href="https://savethesnakes.org/snakerescuecall/" target="_blank">
+          <img src="images/5.png" alt="Snake Rescue">
+          <span class="overlay">Snake Rescue</span>
+        </a>
+      </div>
+      <!-- Grid item: Bird Rescue -->
+      <div class="resource-item">
+        <a href="https://ftlob.rescuegroups.org/" target="_blank">
+          <img src="images/6.png" alt="Bird Rescue">
+          <span class="overlay">Bird Rescue</span>
+        </a>
+      </div>
+      <!-- Grid item: Consultation (internal link) -->
+      <div class="resource-item">
+        <a href="consult.html">
+          <img src="images/1.png" alt="Consultation">
+          <span class="overlay">Request a Consultation</span>
+        </a>
+      </div>
+    </div>
+
+        <aside class="resource-aside">
+            <p>We are also happy to help you navigate the adoption process!<br> We will guide you through each step in the process from determining which type of pet is best suited for your family and home environment, to completing the necessary paperwork, to bringing your new loved one home.<br> Please fill out our <a href="contact.html">contact form to request a consultation</a>. We will contact you within 48 hours to schedule a consultation. <em>All fields are required.</em></p>
+          </aside>
+
+          <section id="reviews" aria-label="Customer Reviews">
+            <h2>What Our Clients Say</h2>
+            <div class="slideshow" aria-live="polite">
+              <!-- Review 1 -->
+              <div class="slide active">
+                <blockquote>
+                  <p>"I couldn't be happier with the service at Paradigm Pet Professionals. Their expertise helped me adopt my best friend!"</p>
+                  <footer>- Sarah L.</footer>
+                </blockquote>
+              </div>
+              <!-- Review 2 -->
+              <div class="slide">
+                <blockquote>
+                  <p>"The consultation was friendly and informative. Highly recommend for anyone needing pet care advice."</p>
+                  <footer>- Michael T.</footer>
+                </blockquote>
+              </div>
+              <!-- Review 3 -->
+              <div class="slide">
+                <blockquote>
+                  <p>"Excellent guidance on pet adoption. I felt supported every step of the way."</p>
+                  <footer>- Emily R.</footer>
+                </blockquote>
+              </div>
+              <!-- Review 4 -->
+              <div class="slide">
+                <blockquote>
+                  <p>"Paradigm Pet Professionals truly care about animals and their owners. Their advice was spot on."</p>
+                  <footer>- David K.</footer>
+                </blockquote>
+              </div>
+              <!-- Review 5 -->
+              <div class="slide">
+                <blockquote>
+                  <p>"A fantastic experience from start to finish. My new pet is a wonderful addition to our family."</p>
+                  <footer>- Linda W.</footer>
+                </blockquote>
+              </div>
+            </div>
+          </section>
+          
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <!-- Sitemap Section -->
+      <div class="footer-sitemap">
+        <h3>Sitemap</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <ul><li><strong>Pet Care</strong></li>
+            <li><a href="dogs.html">Dogs</a></li>
+            <li><a href="cats.html">Cats</a></li>
+            <li><a href="birds.html">Birds</a></li>
+            <li><a href="snakes.html">Snakes</a></li>
+            <li><a href="fish.html">Fish</a></li>
+            <li><a href="smallpets.html">Small Pets</a></li>
+          </ul>
+          <li class="footer-contact"><a href="consult.html">Consult with a 'Pexpert'!</a></li>
+          
+        </ul>
+      </div>
+      
+      <!-- Social Media Section -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info Section -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <address>
+          1234 Pet Street,<br>
+          Animal City, PA 12345<br>
+          Phone: (123) 456-7890
+        </address>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2025 Paradigm Pet Professionals. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const slides = document.querySelectorAll('.slideshow .slide');
+      let currentSlide = 0;
+      const totalSlides = slides.length;
+      
+      setInterval(() => {
+        // Remove active class from current slide
+        slides[currentSlide].classList.remove('active');
+        // Calculate next slide index (wrap around using modulo)
+        currentSlide = (currentSlide + 1) % totalSlides;
+        // Add active class to the next slide
+        slides[currentSlide].classList.add('active');
+      }, 5000); // 5000ms = 5 seconds
+    });
+    </script>
+    
+  
+</body>
+</html>
